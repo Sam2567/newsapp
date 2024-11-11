@@ -1,4 +1,4 @@
-function NavBar() {
+function NavBar({ setCategory }) {
   return (
     <nav
       className="navbar navbar-expand-lg bg-body-tertiary"
@@ -22,24 +22,44 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
+              <button
+                className="nav-link"
+                onClick={() => setCategory("technology")}
+              >
+                Technology
+              </button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
+              <button
+                className="nav-link"
+                onClick={() => setCategory("business")}
+              >
+                Business
+              </button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
+              <button
+                className="nav-link"
+                onClick={() => setCategory("sports")}
+              >
+                Sports
+              </button>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
-                Disabled
-              </a>
+              <button
+                className="nav-link"
+                onClick={() => setCategory("health")}
+              >
+                Health
+              </button>
+            </li>
+            <li className="nav-item">
+              <button
+                className="nav-link"
+                onClick={() => setCategory("entertainment")}
+              >
+                Entertainment
+              </button>
             </li>
           </ul>
         </div>
